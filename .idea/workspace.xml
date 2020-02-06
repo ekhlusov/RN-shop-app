@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a0b4260-c42c-434b-914f-9afda2d1be6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/shop/ProductItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dummy-data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nav/Shop.navigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sceens/shop/ProductDetail.screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sceens/user/UserProducts.screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/actions/products.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/reducers/products.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UI/HeaderButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shop/CartItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/cart-item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/actions/cart.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/reducers/cart.reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/shop/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/shop/ProductItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nav/Shop.navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/nav/Shop.navigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sceens/shop/ProductDetail.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/ProductDetail.screen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XP1C5xUilOa1DRziabOrX5oyH5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -65,7 +64,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580932784904</updated>
-      <workItem from="1580932786214" duration="4338000" />
+      <workItem from="1580932786214" duration="4431000" />
+      <workItem from="1581014309640" duration="8320000" />
     </task>
     <servers />
   </component>
@@ -77,13 +77,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="263" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1580933092515" />
+    <state x="451" y="269" width="626" height="518" key="find.popup" timestamp="1581021344578">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="451" y="269" width="626" height="518" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581021344578" />
     <state x="418" y="247" key="run.anything.popup" timestamp="1580935455708">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="418" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1580935455708" />
-    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1580935236966">
+    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581020646778">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1580935236966" />
+    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581020646778" />
   </component>
 </project>
