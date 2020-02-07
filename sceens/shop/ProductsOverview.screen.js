@@ -1,12 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, FlatList } from 'react-native';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
-import ProductItem from '../../components/shop/ProductItem';
+import React from "react";
+import { StyleSheet, Text, FlatList } from "react-native";
+import { HeaderButtons, Item } from "react-navigation-header-buttons";
+import ProductItem from "../../components/shop/ProductItem";
 
 // new redux
-import { useSelector, useDispatch } from 'react-redux';
-import { addToCart } from '../../store/actions/cart.actions';
-import CustomHeaderButton from '../../components/UI/HeaderButton';
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../../store/actions/cart.actions";
+import CustomHeaderButton from "../../components/UI/HeaderButton";
 
 const ProductsOverviewScreen = props => {
   const products = useSelector(state => state.products.availableProducts);
@@ -21,7 +21,7 @@ const ProductsOverviewScreen = props => {
           title={itemData.item.title}
           price={itemData.item.price}
           onViewDetail={() =>
-            props.navigation.navigate('ProductDetail', {
+            props.navigation.navigate("ProductDetail", {
               productId: itemData.item.id,
               productTitle: itemData.item.title
             })
@@ -38,13 +38,22 @@ const ProductsOverviewScreen = props => {
 // nav
 ProductsOverviewScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'All Products',
+    headerTitle: "All Products",
+    headerLeft: () => (
+      <HeaderButtons title="Cart" HeaderButtonComponent={CustomHeaderButton}>
+        <Item
+          title="Menu"
+          iconName="md-menu"
+          onPress={() => navData.navigation.toggleDrawer()}
+        />
+      </HeaderButtons>
+    ),
     headerRight: () => (
       <HeaderButtons title="Cart" HeaderButtonComponent={CustomHeaderButton}>
         <Item
           title="Cart"
           iconName="md-cart"
-          onPress={() => navData.navigation.navigate('Cart')}
+          onPress={() => navData.navigation.navigate("Cart")}
         />
       </HeaderButtons>
     )
