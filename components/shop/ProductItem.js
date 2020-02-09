@@ -4,14 +4,12 @@ import {
   StyleSheet,
   Text,
   Image,
-  Button,
   TouchableNativeFeedback
 } from 'react-native';
-import theme from '../../constants/theme';
 
 const ProductItem = props => {
   return (
-    <TouchableNativeFeedback onPress={props.onViewDetail}>
+    <TouchableNativeFeedback onPress={props.onSelect}>
       <View style={styles.product}>
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={{ uri: props.image }} />
@@ -22,18 +20,7 @@ const ProductItem = props => {
           <Text style={styles.price}>${props.price.toFixed(2)}</Text>
         </View>
 
-        <View style={styles.actions}>
-          <Button
-            color={theme.colors.primary}
-            title="View Details"
-            onPress={props.onViewDetail}
-          />
-          <Button
-            color={theme.colors.primary}
-            title="To Cart"
-            onPress={props.onAddToCart}
-          />
-        </View>
+        <View style={styles.actions}>{props.children}</View>
       </View>
     </TouchableNativeFeedback>
   );

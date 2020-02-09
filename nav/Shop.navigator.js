@@ -1,31 +1,33 @@
-import React from "react";
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
-import { createDrawerNavigator } from "react-navigation-drawer";
-import { Platform } from "react-native";
-import theme from "../constants/theme";
+import React from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { Platform } from 'react-native';
+import theme from '../constants/theme';
 
 // Screens
-import ProductsOverviewScreen from "../sceens/shop/ProductsOverview.screen";
-import ProductDetailScreen from "../sceens/shop/ProductDetail.screen";
-import CartScreen from "../sceens/shop/Cart.screen";
-import OrdersScreen from "../sceens/shop/Orders.screen";
-import { Ionicons } from "@expo/vector-icons";
+import ProductsOverviewScreen from '../sceens/shop/ProductsOverview.screen';
+import ProductDetailScreen from '../sceens/shop/ProductDetail.screen';
+import CartScreen from '../sceens/shop/Cart.screen';
+import OrdersScreen from '../sceens/shop/Orders.screen';
+import { Ionicons } from '@expo/vector-icons';
+import UserProductsScreen from '../sceens/user/UserProducts.screen';
+import EditProductScreen from '../sceens/user/EditProduct.screen';
 
 // opts
 const defaultNavigationOptions = {
   headerStyle: {
-    backgroundColor: Platform.OS === "android" ? theme.colors.primary : ""
+    backgroundColor: Platform.OS === 'android' ? theme.colors.primary : ''
   },
   headerTitleStyle: {
-    fontFamily: "open-sans"
+    fontFamily: 'open-sans'
   },
   // ios
   headerBackTitleStyle: {
-    fontFamily: "open-sans"
+    fontFamily: 'open-sans'
   },
   //^^ios
-  headerTintColor: Platform.OS === "android" ? "white" : theme.colors.primary
+  headerTintColor: Platform.OS === 'android' ? 'white' : theme.colors.primary
 };
 
 const ProductsNavigator = createStackNavigator(
@@ -44,7 +46,6 @@ const ProductsNavigator = createStackNavigator(
   }
 );
 
-// Drawer
 const OrdersNavigator = createStackNavigator(
   {
     Orders: OrdersScreen
@@ -59,11 +60,28 @@ const OrdersNavigator = createStackNavigator(
   }
 );
 
+// Drawer
+const AdminNavigator = createStackNavigator(
+  {
+    UserProducts: UserProductsScreen,
+    EditProduct: EditProductScreen
+  },
+  {
+    navigationOptions: {
+      drawerIcon: drawerConfig => (
+        <Ionicons name="md-create" size={23} color={drawerConfig.tintColor} />
+      )
+    },
+    defaultNavigationOptions: defaultNavigationOptions
+  }
+);
+
 // Shop navigator
 const ShopNavigator = createDrawerNavigator(
   {
     Products: ProductsNavigator,
-    Orders: OrdersNavigator
+    Orders: OrdersNavigator,
+    Admin: AdminNavigator
   },
   {
     contentOptions: {

@@ -3,8 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 const CartItem = props => {
-  const { quantity, title, amount, onRemove } = props;
-  console.log(props);
+  const { quantity, title, amount, onRemove, isDeletable } = props;
 
   return (
     <View style={styles.cartItem}>
@@ -15,9 +14,11 @@ const CartItem = props => {
 
       <View style={styles.itemData}>
         <Text style={styles.mainText}>${props.amount.toFixed(2)}</Text>
-        <TouchableOpacity onPress={onRemove} style={styles.deleteButton}>
-          <Ionicons name="md-trash" size={23} color="red" />
-        </TouchableOpacity>
+        {isDeletable && (
+          <TouchableOpacity onPress={onRemove} style={styles.deleteButton}>
+            <Ionicons name="md-trash" size={23} color="red" />
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );

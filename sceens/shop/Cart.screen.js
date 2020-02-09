@@ -1,10 +1,10 @@
-import React from "react";
-import { View, StyleSheet, Text, FlatList, Button } from "react-native";
-import { useSelector, useDispatch } from "react-redux";
-import theme from "../../constants/theme";
-import CartItem from "../../components/shop/CartItem";
-import { removeFromCart } from "../../store/actions/cart.actions";
-import { addOrder } from "../../store/actions/orders.actions";
+import React from 'react';
+import { View, StyleSheet, Text, FlatList, Button } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import theme from '../../constants/theme';
+import CartItem from '../../components/shop/CartItem';
+import { removeFromCart } from '../../store/actions/cart.actions';
+import { addOrder } from '../../store/actions/orders.actions';
 
 const CartScreen = props => {
   const cartTotalAmount = useSelector(state => state.cart.totalAmount);
@@ -30,8 +30,10 @@ const CartScreen = props => {
     <View style={styles.screen}>
       <View style={styles.summary}>
         <Text style={styles.summaryText}>
-          Total:{" "}
-          <Text style={styles.amount}>${cartTotalAmount.toFixed(2)}</Text>
+          Total:{' '}
+          <Text style={styles.amount}>
+            ${Math.round((cartTotalAmount / 100) * 100).toFixed(2)}
+          </Text>
         </Text>
 
         <Button
@@ -51,6 +53,7 @@ const CartScreen = props => {
             quantity={itemData.item.quantity}
             title={itemData.item.title}
             amount={itemData.item.sum}
+            isDeletable
             onRemove={() => {
               dispatch(removeFromCart(itemData.item.id));
             }}
@@ -62,7 +65,7 @@ const CartScreen = props => {
 };
 
 CartScreen.navigationOptions = {
-  headerTitle: "Your Cart"
+  headerTitle: 'Your Cart'
 };
 
 const styles = StyleSheet.create({
@@ -70,13 +73,13 @@ const styles = StyleSheet.create({
     margin: 20
   },
   summary: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     marginBottom: 20,
     padding: 15,
     // ios
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOpacity: 0.26,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 8,
@@ -84,10 +87,10 @@ const styles = StyleSheet.create({
     elevation: 5,
 
     borderRadius: 5,
-    backgroundColor: "white"
+    backgroundColor: 'white'
   },
   summaryText: {
-    fontFamily: "open-sans-bold",
+    fontFamily: 'open-sans-bold',
     fontSize: 18
   },
   amount: {
