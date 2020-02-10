@@ -2,28 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a0b4260-c42c-434b-914f-9afda2d1be6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/shop/OrderItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shop/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/shop/CartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shop/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/shop/ProductItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nav/Shop.navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/nav/Shop.navigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/shop/OrderItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/shop/OrderItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sceens/user/UserProducts.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/user/UserProducts.screen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/actions/cart.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/cart.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/actions/orders.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/orders.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/actions/products.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/products.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/cart.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/cart.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/orders.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/orders.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/products.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/products.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,17 +34,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Program Files\nodejs\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -76,11 +63,27 @@
       <workItem from="1581163767558" duration="751000" />
       <workItem from="1581164554545" duration="2921000" />
       <workItem from="1581192785568" duration="8113000" />
+      <workItem from="1581251270703" duration="586000" />
+      <workItem from="1581251867825" duration="3232000" />
+      <workItem from="1581258380102" duration="331000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="263" y="170" key="SettingsEditor" timestamp="1581164527536">
