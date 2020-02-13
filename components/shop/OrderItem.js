@@ -21,7 +21,6 @@ const OrderItem = props => {
 
       {showDetails && (
         <View style={styles.detailedItems}>
-          {console.log(items)}
           {items.map(cartItem => (
             <CartItem
               key={cartItem.id}

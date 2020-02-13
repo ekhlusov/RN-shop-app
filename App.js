@@ -11,6 +11,9 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 
+// redux thunk
+import ReduxThunk from 'redux-thunk';
+
 // nav
 import ShopNavigator from './nav/Shop.navigator';
 import { cartReducer } from './store/reducers/cart.reducer';
