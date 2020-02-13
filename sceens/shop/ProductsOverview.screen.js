@@ -1,5 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, FlatList, Button } from 'react-native';
+import React, { useEffect, useState, useCallback } from 'react';
+import {
+  View,
+  StyleSheet,
+  Text,
+  FlatList,
+  Button,
+  ActivityIndicator
+} from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import ProductItem from '../../components/shop/ProductItem';
 
@@ -8,10 +15,29 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../../store/actions/cart.actions';
 import CustomHeaderButton from '../../components/UI/HeaderButton';
 import theme from '../../constants/theme';
+import { fetchProducts } from '../../store/actions/products.actions';
 
 const ProductsOverviewScreen = props => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
+
   const products = useSelector(state => state.products.availableProducts);
   const dispatch = useDispatch();
+
+  const loadProducts = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      await dispatch(fetchProducts());
+    } catch (e) {
+      setError(e);
+    }
+
+    setIsLoading(false);
+  }, [dispatch, setIsLoading, setError]);
+
+  useEffect(() => {
+    loadProducts();
+  }, [dispatch]);
 
   const selectItemHandler = (id, title) => {
     props.navigation.navigate('ProductDetail', {
@@ -19,6 +45,30 @@ const ProductsOverviewScreen = props => {
       productTitle: title
     });
   };
+
+  if (error) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Error occured</Text>
+      </View>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <ActivityIndicator size="large" color={theme.colors.primary} />
+      </View>
+    );
+  }
+
+  if (!isLoading && products.length === 0) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>No products found</Text>
+      </View>
+    );
+  }
 
   return (
     <FlatList
