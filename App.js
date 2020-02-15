@@ -9,7 +9,6 @@ import * as Font from 'expo-font';
 import { productsReducer } from './store/reducers/products.reducer';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import ReduxThunk from 'redux-thunk';
 
 // redux thunk
 import ReduxThunk from 'redux-thunk';

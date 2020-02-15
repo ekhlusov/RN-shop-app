@@ -92,7 +92,7 @@ const EditProductScreen = props => {
     let isValid = text.trim().length > 0;
     dispatchFromState({
       type: FORM_UPDATE,
-      payload: { value: text, isValid: isValid, input: inputId }
+      payload: { value: text, isValid: isValid, inputId: inputId }
     });
   };
 
@@ -109,7 +109,6 @@ const EditProductScreen = props => {
             onChangeText={text => textChangeHandler(text, 'title')}
             keyboardType="default"
             autoCapitalize="sentences"
-            autoCorrect
             returnKeyType="next"
           />
           {!formState.inputValidities.title && <Text>Title is not valid</Text>}
@@ -120,7 +119,7 @@ const EditProductScreen = props => {
           <TextInput
             style={styles.input}
             value={imageUrl}
-            onChangeText={textChangeHandler.bind(this, 'imageUrl')}
+            onChangeText={text => textChangeHandler(text, 'imageUrl')}
           />
         </View>
 
@@ -130,7 +129,7 @@ const EditProductScreen = props => {
             <TextInput
               style={styles.input}
               value={price}
-              onChangeText={textChangeHandler.bind(this, 'price')}
+              onChangeText={text => textChangeHandler(text, 'price')}
               keyboardType="decimal-pad"
             />
           </View>
@@ -140,7 +139,7 @@ const EditProductScreen = props => {
           <TextInput
             style={styles.input}
             value={description}
-            onChangeText={textChangeHandler.bind(this, 'description')}
+            onChangeText={text => textChangeHandler(text, 'description')}
           />
         </View>
       </View>
