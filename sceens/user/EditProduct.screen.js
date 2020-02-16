@@ -1,11 +1,12 @@
-import React, { useEffect, useCallback, useReducer } from 'react';
+import React, { useState, useEffect, useCallback, useReducer } from 'react';
 import {
   View,
   ScrollView,
   StyleSheet,
   Text,
   TextInput,
-  Alert
+  Alert,
+  ActivityIndicator
 } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import CustomHeaderButton from '../../components/UI/HeaderButton';
@@ -14,6 +15,7 @@ import {
   createProduct,
   updateProduct
 } from '../../store/actions/products.actions';
+import theme from '../../constants/theme';
 
 // form reducer
 const FORM_UPDATE = 'UPDATE';
@@ -46,6 +48,9 @@ const fromReducer = (state, action) => {
 };
 
 const EditProductScreen = props => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
+
   const prodId = props.navigation.getParam('productId');
   const editedProduct = useSelector(state =>
     state.products.userProducts.find(product => product.id === prodId)
@@ -75,10 +80,16 @@ const EditProductScreen = props => {
     // =======
     const { title, description, imageUrl, price } = formState.inputValues;
 
+    setError(null);
+    setIsLoading(true);
     if (editedProduct) {
-      dispatch(updateProduct(prodId, title, description, imageUrl));
+      dispatch(updateProduct(prodId, title, description, imageUrl))
+        .then(() => setIsLoading(false))
+        .catch(e => setError(e.message));
     } else {
-      dispatch(createProduct(title, description, imageUrl, parseFloat(price)));
+      dispatch(createProduct(title, description, imageUrl, parseFloat(price)))
+        .then(() => setIsLoading(false))
+        .catch(e => setError(e.message));
     }
 
     props.navigation.goBack();
@@ -97,6 +108,14 @@ const EditProductScreen = props => {
   };
 
   const { title, price, imageUrl, description } = formState.inputValues;
+
+  if (isLoading) {
+    return (
+      <View style={styles.centered}>
+        <ActivityIndicator size="large" color={theme.colors.primary} />
+      </View>
+    );
+  }
 
   return (
     <ScrollView>
@@ -181,6 +200,12 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     borderBottomColor: '#ccc',
     borderBottomWidth: 1
+  },
+
+  centered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 

@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8a0b4260-c42c-434b-914f-9afda2d1be6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/actions/orders.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/orders.actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/actions/products.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/products.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/reducers/orders.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/orders.reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/reducers/products.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/products.reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,37 +67,71 @@
       <workItem from="1581192785568" duration="8113000" />
       <workItem from="1581358452495" duration="383000" />
       <workItem from="1581621214033" duration="547000" />
-      <workItem from="1581621812085" duration="5637000" />
+      <workItem from="1581621812085" duration="5852000" />
+      <workItem from="1581765699351" duration="5182000" />
+      <workItem from="1581787342324" duration="2309000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed saving and redux-thunk import">
+      <created>1581767236476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581767236476</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed saving and redux-thunk import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed saving and redux-thunk import" />
   </component>
   <component name="WindowStateProjectService">
     <state x="248" y="182" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581248313947">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="248" y="182" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.689@0.0.1280.689" timestamp="1581248313947" />
+    <state x="388" y="35" key="CommitChangelistDialog2" timestamp="1581767236058">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="388" y="35" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1581767236058" />
     <state x="429" y="310" key="EditFileWatcherDialog" timestamp="1581621262233">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="429" y="310" key="EditFileWatcherDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581621262233" />
+    <state x="468" y="241" key="MultipleFileMergeDialog" timestamp="1581628549377">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="468" y="241" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581628549377" />
     <state x="263" y="170" key="SettingsEditor" timestamp="1581621398738">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="263" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581621398738" />
-    <state x="451" y="269" width="626" height="518" key="find.popup" timestamp="1581164705944">
+    <state x="356" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581767238610">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="451" y="269" width="626" height="518" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581164705944" />
+    <state x="356" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1581767238610" />
+    <state x="100" y="100" width="1329" height="857" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581766911431">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="100" y="100" width="1329" height="857" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581766911431" />
+    <state x="451" y="269" width="626" height="518" key="find.popup" timestamp="1581768126596">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="451" y="269" width="626" height="518" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581768126596" />
+    <state x="486" y="315" key="git4idea.merge.GitPullDialog" timestamp="1581628528968">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="486" y="315" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581628528968" />
     <state x="418" y="247" key="run.anything.popup" timestamp="1580935455708">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="418" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1580935455708" />
-    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581625168130">
+    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581788903603">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581625168130" />
+    <state x="425" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581788903603" />
   </component>
 </project>

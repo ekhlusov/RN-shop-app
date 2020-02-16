@@ -15,7 +15,6 @@ const INITIAL_STATE = {
 export const productsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SET_PRODUCTS: {
-      console.log(action.payload);
       return {
         availableProducts: action.payload,
         userProducts: action.payload.filter(product => product.ownerId === 'u1') // temp

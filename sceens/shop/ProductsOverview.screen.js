@@ -25,6 +25,7 @@ const ProductsOverviewScreen = props => {
   const dispatch = useDispatch();
 
   const loadProducts = useCallback(async () => {
+    console.log('PRODUCTS LOADED');
     setIsLoading(true);
     try {
       await dispatch(fetchProducts());
@@ -34,6 +35,19 @@ const ProductsOverviewScreen = props => {
 
     setIsLoading(false);
   }, [dispatch, setIsLoading, setError]);
+
+  // listener для релоуда продуктов при каждом посещении страницы
+  useEffect(() => {
+    const willFocusSubscription = props.navigation.addListener(
+      'willFocus',
+      loadProducts
+    );
+
+    // clean up
+    return () => {
+      willFocusSubscription.remove();
+    };
+  }, [loadProducts]);
 
   useEffect(() => {
     loadProducts();
