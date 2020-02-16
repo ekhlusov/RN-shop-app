@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8a0b4260-c42c-434b-914f-9afda2d1be6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Cart.screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/Orders.screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/shop/ProductsOverview.screen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sceens/user/EditProduct.screen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/actions/orders.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/orders.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/actions/products.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/products.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/orders.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/orders.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/products.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/products.reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +64,7 @@
       <workItem from="1581621812085" duration="5852000" />
       <workItem from="1581765699351" duration="5182000" />
       <workItem from="1581787342324" duration="2309000" />
+      <workItem from="1581872298780" duration="1638000" />
     </task>
     <task id="LOCAL-00001" summary="fixed saving and redux-thunk import">
       <created>1581767236476</created>
@@ -125,10 +120,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="486" y="315" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581628528968" />
-    <state x="418" y="247" key="run.anything.popup" timestamp="1580935455708">
+    <state x="418" y="247" key="run.anything.popup" timestamp="1581873172788">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="418" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1580935455708" />
+    <state x="418" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1581873172788" />
     <state x="425" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581788903603">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

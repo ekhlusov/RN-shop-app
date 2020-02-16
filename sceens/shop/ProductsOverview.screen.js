@@ -19,21 +19,22 @@ import { fetchProducts } from '../../store/actions/products.actions';
 
 const ProductsOverviewScreen = props => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState(false);
 
   const products = useSelector(state => state.products.availableProducts);
   const dispatch = useDispatch();
 
   const loadProducts = useCallback(async () => {
+    setError(null);
+    setIsRefreshing(true);
     console.log('PRODUCTS LOADED');
-    setIsLoading(true);
     try {
       await dispatch(fetchProducts());
     } catch (e) {
       setError(e);
     }
-
-    setIsLoading(false);
+    setIsRefreshing(false);
   }, [dispatch, setIsLoading, setError]);
 
   // listener для релоуда продуктов при каждом посещении страницы
@@ -50,7 +51,8 @@ const ProductsOverviewScreen = props => {
   }, [loadProducts]);
 
   useEffect(() => {
-    loadProducts();
+    setIsLoading(true);
+    loadProducts().then(() => setIsLoading(false));
   }, [dispatch]);
 
   const selectItemHandler = (id, title) => {
@@ -86,6 +88,8 @@ const ProductsOverviewScreen = props => {
 
   return (
     <FlatList
+      onRefresh={loadProducts} // pull to refresh
+      refreshing={isRefreshing} // pull to refresh
       data={products}
       renderItem={itemData => (
         <ProductItem
