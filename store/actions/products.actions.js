@@ -35,7 +35,7 @@ export const fetchProducts = () => {
 };
 
 export const deleteProduct = productId => {
-  return async dispatch => {
+  return async (dispatch, getState) => {
     await fetch(
       `https://rn-course-shop-app.firebaseio.com/products/${productId}.json`,
       {
@@ -48,10 +48,11 @@ export const deleteProduct = productId => {
 };
 
 export const createProduct = (title, description, imageUrl, price) => {
-  return async dispatch => {
+  return async (dispatch, getState) => {
+    const token = getState().auth.token;
     // any async code!
     const response = await fetch(
-      'https://rn-course-shop-app.firebaseio.com/products.json',
+      'https://rn-course-shop-app.firebaseio.com/products.json?auth=${token}',
       {
         method: 'POST',
         headers: {
@@ -71,9 +72,10 @@ export const createProduct = (title, description, imageUrl, price) => {
 };
 
 export const updateProduct = (id, title, description, imageUrl) => {
-  return async dispatch => {
+  return async (dispatch, getState) => {
+    const token = getState().auth.token;
     await fetch(
-      `https://rn-course-shop-app.firebaseio.com/products/${id}.json`,
+      `https://rn-course-shop-app.firebaseio.com/products/${id}.json?auth=${token}`,
       {
         method: 'PATCH', // update only some data
         headers: {
